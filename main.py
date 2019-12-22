@@ -1,23 +1,11 @@
 import pycurl
 import pyshark
-from PIL import Image
-from PIL import ImageFilter
 from urllib.parse import urlencode
 
 # includes for pyinstaller
 from py._vendored_packages import iniconfig
 from pyshark import config
 from py import _path
-
-
-# create image from bytes
-def image(data):
-    img_bytes = bytes.fromhex(data)
-
-    img = Image.frombytes('RGB', (50, 50), img_bytes)
-    img = img.filter(ImageFilter.BLUR)
-    img.save('test.bmp', 'BMP')
-    return data
 
 
 # POST data to website
