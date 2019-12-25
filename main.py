@@ -73,7 +73,7 @@ for packet in cap.sniff_continuously():
     #     if dst_incoming:
     #         print(payload)
     #         if first_packet:
-    #             payload = payload[13:]
+    #             payload = payload[12:]
     #             first_packet = False
     #         if check_for_end_of_packet(payload):
     #             payload = payload[:len(payload)-3]
