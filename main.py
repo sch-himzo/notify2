@@ -15,9 +15,9 @@ def push_to_website(state, stitches = None, current_design=None, total_designs=N
 
     c.setopt(c.URL, url)
     if stitches is None:
-        data = {'state': state, 'machine_key': 'KurvaAnyad123'}
+        data = {'state': state, 'machine_key': 'XXXXXXX'}
     else:
-        data = {'state': state, 'machine_key': 'KurvaAnyad123', 'stitches': stitches, 'designs': total_designs, 'current_design': current_design}
+        data = {'state': state, 'machine_key': 'XXXXXXX', 'stitches': stitches, 'designs': total_designs, 'current_design': current_design}
     pf = urlencode(data)
 
     c.setopt(c.POSTFIELDS, pf)
@@ -34,7 +34,7 @@ def send_dst_to_website():
 
     c.setopt(c.URL, url)
     c.setopt(c.POST, 1)
-    c.setopt(c.HTTPPOST, [('machine_key', 'KurvaAnyad123'), ('dst', (c.FORM_FILE, 'random.dst', c.FORM_FILENAME, 'random.dst'))])
+    c.setopt(c.HTTPPOST, [('machine_key', 'XXXXXXX'), ('dst', (c.FORM_FILE, 'random.dst', c.FORM_FILENAME, 'random.dst'))])
     c.setopt(c.SSL_VERIFYPEER, 0)
     c.setopt(c.SSL_VERIFYHOST, 0)
     c.perform()
